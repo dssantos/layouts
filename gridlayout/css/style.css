@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    font-family: Nunito;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #000;
+    box-shadow: 0px 5px 20px #000;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu li a {
+    color: #FFF;
+    display: block;
+    text-decoration: none;padding: 10px 20px 10px 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.menu li a:hover {
+    color: #FFF;
+    display: block;
+    text-decoration: none;
+    margin-left: 10px;
+    background-color: #333;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 10px;
+    background-color: #FFF;
+}
+
+h1 {
+    color: #000;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Grid Layout*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 20px 0px 20px;
+    border: 0px solid #555;
+    display: grid;
+    grid-gap: 20px;
+    justify-content: center;
+    grid-template-areas: 
+    "sidenav item item" 
+    "sidenav item item" 
+    "sidenav item item" 
+    "footer footer footer";
+}
+
+img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.sidenav {
+    max-width: 300px;
+    min-width: 250px;
+    height: 940px;
+    background-color: #000;
+    border-radius: 20px;
+    grid-area: "sidenav";
+    grid-row: sidenav;
+}
+
+.item {
+    max-width: 300px;
+    min-width: 250px;
+    height: 300px;
+    background-color: #000;
+    border-radius: 20px;
+    grid-area: "item";
+    color: #fff;
+}
+
+.footer {
+    width: auto;
+    height: 300px;
+    background-color: #000;
+    border-radius: 20px;
+    grid-area: "footer";
+    grid-column: footer;
+}
+
+@media (max-width: 820px){
+    .container {
+        grid-template-areas: 
+        "sidenav item" 
+        "sidenav item" 
+        "sidenav item" 
+        "sidenav item" 
+        "sidenav item" 
+        "sidenav item" 
+        "footer footer";
+    }
+}
+
+@media (max-width: 520px){
+
+.sidenav {
+    height: 200px;
+}
+    .container {
+        grid-template-areas: 
+        "sidenav" 
+        "item" 
+        "item" 
+        "item" 
+        "item" 
+        "item" 
+        "footer";
+    }
+}
